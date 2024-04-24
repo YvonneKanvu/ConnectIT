@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+.navBar{
+  display: flex;
+}
+.baniere{
+  background-image: url('./../public/Image/Consultation.webp');
+}

@@ -1,7 +1,7 @@
 function ListPrestataire() {
     return ( 
         <div className="prestataire">
-           <p>Prestataiire</p>
+           <p>Prestataire</p>
         </div>
      );
 }

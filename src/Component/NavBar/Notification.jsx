@@ -1,7 +1,7 @@
 function Notification() {
     return ( 
-        <div className="notification">
-            <img src="public\Image\logo correction.png" alt=""/>
+        <div className="flex-item justify-end">
+            <img src="/Image/logo correction.png" alt=" "width="30" height="20"/>
         </div>
      );
 }

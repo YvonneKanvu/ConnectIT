@@ -5,7 +5,7 @@ import Message from "./Message";
 import Notification from "./Notification";
 function NavBar() {
     return ( 
-        <div className="navBar">
+        <div className="flex ">
          <Logo/>
          <ListPrestataire/>
          <Message/>

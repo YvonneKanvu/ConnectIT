@@ -1,7 +1,7 @@
 function Logo() {
     return ( 
-        <div className="logo">
-           <img src="public\Image\logo correction.png" alt=""  />
+        <div className="flex-row justify-start ">
+           <img src="public\Image\logo correction.png" alt="" width="100" height="80" />
         </div>
      );
 }
