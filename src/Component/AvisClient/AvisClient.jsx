@@ -1,10 +1,10 @@
 function AvisClients() {
   return (
     <div className="">
-      <p className="text-xl font-bold mt-20">
+      <p className="text-xl mt-10">
         Ce que nos clients disent de nous
       </p>
-      <div className="flex gap-3">
+      <div className="flex gap-3 mt-5">
         <div className="bg-blue-300  h-32 p-4 text-black">
           <p>
             Je tiens à vous rémercier sincèrement pour votre service excellent

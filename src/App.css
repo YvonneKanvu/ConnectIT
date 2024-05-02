@@ -1,13 +1,12 @@
 #root {
-  max-width: 1280px;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 .logo {
   height: 6em;
-  padding: 1.5em;
+  /* padding: 1.5em; */
   will-change: filter;
   transition: filter 300ms;
 }
@@ -19,11 +18,17 @@
 }
 
 @keyframes logo-spin {
-  from {
+  /* from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  } */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
@@ -34,7 +39,7 @@
 }
 
 .card {
-  padding: 2em;
+  /* padding: 2em; */
 }
 
 .read-the-docs {
@@ -43,6 +48,19 @@
 .navBar{
   display: flex;
 }
-.baniere{
-  background-image: url('./../public/Image/Consultation.webp');
+/* .baniere{
+  background-image: url('./../public\Image\connect IT bg.jpg');
+  height: 30rem;
+  left: 0px;
+  right: 0px;
+} */
+.imagePrestataire{
+  display: flex;
+  overflow: hidden;
 }
+.imagePrestataire img{
+  flex-shrink: 0; 
+  width: 100%; 
+  animation: scroll 10s linear infinite;
+}
+

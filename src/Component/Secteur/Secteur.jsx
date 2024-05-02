@@ -1,24 +1,24 @@
 function Secteur() {
   return (
-    <div className=" w-full">
-      <p className="text-2xl font-bold  mt-20">Tirez parti des prestataires</p>
+    <div>
+      <p className="text-2xl mt-10">Tirez parti des prestataires</p>
       <p>
         Nous sommes le réseau le plus talentieux de le RDC en matière de
         conception et de technologie, pret à relever à vos défis les plus
         importants
       </p>
-      <div className=" w-full flex ">
+      <div className=" w-full flex mt-5">
         <div className="w-full">
-          <div className=" bg-blue-300 ">
-            <p className="text-xl font-bold">Développeurs</p>
-            <p className="font-bold">
-              Ingénieurs Logiciels,Codeurs possedant une expertise dans
+          <div className=" bg-blue-300 p-5">
+            <p className="text-xl text-white mb-2 ">Développeurs</p>
+            <p className=" text-white">
+              Ingénieurs Logiciels,Codeurs possedant <br></br>une expertise dans
               plusieurs technologies
             </p>
           </div>
-          <div className=" bg-gray-200">
-            <p className="text-xl font-bold	">Créateurs UI et UX</p>
-            <p className="font-bold">
+          <div className=" bg-gray-200 p-5">
+            <p className="text-xl	mb-2 ">Créateurs UI et UX</p>
+            <p className="">
               Concepteurs experts en UI et UX visuels et interactions, ainsi
               qu'un large éventail d'illustrateurs, d'animateurs et bien plus
               encore
@@ -26,18 +26,18 @@ function Secteur() {
           </div>
         </div>
         <div className=" w-full">
-          <div className=" bg-gray-200">
-            <p className="text-xl font-bold	">Ingénieurs Technicien Réseau</p>
-            <p className="font-bold">
+          <div className=" bg-gray-200 p-5">
+            <p className="text-xl mb-2	">Ingénieurs Technicien Réseau</p>
+            <p className="">
               Spécialiste de réseau et de cyber sécurité doté d'une solide
               connaissance des protocoles et de téchnologies réseau
             </p>
           </div>
-          <div className=" bg-blue-500">
-            <p className="text-xl font-bold	">
+          <div className=" bg-blue-300 p-5">
+            <p className="text-xl text-white mb-2 ">
               Téchnicien Matériel Informatique
             </p>
-            <p className="font-bold">
+            <p className=" text-white">
               Habile en diagnostic et résolution de problèmes, capable
               d'identifier rapidement et efficacement les causes de panne
             </p>

@@ -2,7 +2,7 @@ import Accueil from "../Page/Accueil";
 
 function Layout() {
     return ( 
-        <div className="layout">
+        <div className="w-[100%]">
             <Accueil/>
         </div>
      );

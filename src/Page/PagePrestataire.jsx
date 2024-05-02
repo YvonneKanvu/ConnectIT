@@ -1,6 +1,8 @@
 function PagePrestataire() {
     return ( 
-        <div></div>
+        <div>
+            <h1>Prestataire</h1>
+        </div>
      );
 }
 

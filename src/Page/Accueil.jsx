@@ -4,22 +4,17 @@ import HeroSection from "../Component/HeroSection/HeroSection";
 import ImagePrestataire from "../Component/ImagePrestataire/ImagePrestataire";
 import NavBar from "../Component/NavBar/NavBar";
 import Secteur from "../Component/Secteur/Secteur";
-
-
-
-
 function Accueil() {
   return (
-    <div className="w-full h-full">
-       <div className="baniere">  
+    <div className="accueil w-[100%]">
        <NavBar />
-        <HeroSection />
-      </div>  
+       <div className="mt-12">
+       <HeroSection />  
       <Secteur />
       <ImagePrestataire />
-      <AvisClients/>
+      <AvisClients/> 
+       </div>
       <Footer />
-      <p>copy rith</p>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 function PageUtilisateur() {
     return ( 
-        <div></div>
+        <div>
+            <h1>Utilisateur</h1>
+        </div>
      );
 }
 
