@@ -1,5 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
 
 function ImagePrestataire() {
   return (
