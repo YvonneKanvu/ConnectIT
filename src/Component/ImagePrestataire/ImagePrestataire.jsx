@@ -1,12 +1,12 @@
 
 function ImagePrestataire() {
   return (
-    <div className=" mt-10">
+    <div className=" mt-10 w-[80%] ml-auto mr-auto">
       <p className="text-xl mt-2">Nos Prestataires</p>
-      <div className=" imagePrestataire flex gap-20 justify-between ">
+      <div className=" imagePrestataire flex  justify-between ">
         <div className="w-40 ">
           <img
-            src="public\Image\Olive-removebg-preview.png"
+            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
             alt=""
             className="mr-4"
           />
@@ -14,7 +14,7 @@ function ImagePrestataire() {
         </div>
         <div className="w-40 ">
           <img
-            src="public\Image\Jemuel-removebg-preview.png"
+            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
             alt=""
             className="mr-4"
           />
@@ -23,7 +23,7 @@ function ImagePrestataire() {
 
         <div className="w-40 ">
           <img
-            src="public\Image\Bernard-removebg-preview.png"
+            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
             alt=""
             className="mr-4"
           />
@@ -32,7 +32,7 @@ function ImagePrestataire() {
 
         <div className="w-40">
           <img
-            src="public\Image\IMG-20240408-WA0157-removebg-preview.png"
+            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
             alt=""
             className="mr-4"
           />

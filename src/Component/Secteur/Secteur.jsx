@@ -1,14 +1,14 @@
 function Secteur() {
   return (
-    <div>
+    <div className="w-[80%] ml-auto mr-auto">
       <p className="text-2xl mt-10">Tirez parti des prestataires</p>
       <p>
         Nous sommes le réseau le plus talentieux de le RDC en matière de
         conception et de technologie, pret à relever à vos défis les plus
         importants
       </p>
-      <div className=" w-full flex mt-5">
-        <div className="w-full">
+      <div className="  flex mt-5">
+        <div className="">
           <div className=" bg-blue-300 p-5">
             <p className="text-xl text-white mb-2 ">Développeurs</p>
             <p className=" text-white">
@@ -25,7 +25,7 @@ function Secteur() {
             </p>
           </div>
         </div>
-        <div className=" w-full">
+        <div className=" ">
           <div className=" bg-gray-200 p-5">
             <p className="text-xl mb-2	">Ingénieurs Technicien Réseau</p>
             <p className="">

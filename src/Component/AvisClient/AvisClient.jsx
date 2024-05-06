@@ -1,6 +1,6 @@
 function AvisClients() {
   return (
-    <div className="">
+    <div className="w-[80%] ml-auto mr-auto">
       <p className="text-xl mt-10">
         Ce que nos clients disent de nous
       </p>
