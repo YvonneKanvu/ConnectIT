@@ -36,7 +36,9 @@ function ConnectItForm() {
     });
 
     // Cacher le formulaire après la soumission
-    setShowForm(false);
+       setShowForm(false);
+    location.reload()
+
   };
 
   return (
@@ -206,18 +208,12 @@ function ConnectItForm() {
               </span>
             )}
           </div>
-          <div className="flex gap-5 justify-between">
+          <div className="">
             <button
               className="cursor-pointer rounded-lg bg-blue-500 text-white p-2  hover: opacity-75 w-[225px]  animate "
               type="submit"
             >
-              Créer un compte prestataire
-            </button>
-            <button
-              className="cursor-pointer rounded-lg bg-blue-500 text-white p-2  hover: opacity-75 w-[225px]  animate "
-              type="submit"
-            >
-              Créer un compte utilisateur
+              Créer un compte 
             </button>
           </div>
         </form>

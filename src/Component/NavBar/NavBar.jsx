@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Message from "./Message";
 import Notification from "./Notification";
 import ConnectItSearch from "./ConnectItSearch";
+import Prestataire from './Prestataire';
 
 function NavBar() {
   const [searchValue, setSearchValue] = useState('');
@@ -16,6 +17,7 @@ function NavBar() {
         <Logo />
       </div>
       <div className="flex gap-5" >
+        <Prestataire/>
       <ConnectItSearch value={searchValue} onChange={handleSearchChange} />
         <Message />
         <Notification />

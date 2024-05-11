@@ -6,7 +6,8 @@ function ImagePrestataire() {
       <div className=" imagePrestataire flex  justify-between ">
         <div className="w-40 ">
           <img
-            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
+            src="/Image/IMG-20230820-WA0035-1-removebg-preview.png"
+            
             alt=""
             className="mr-4"
           />
@@ -14,7 +15,8 @@ function ImagePrestataire() {
         </div>
         <div className="w-40 ">
           <img
-            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
+            src="/Image/IMG-20230820-WA0035-1-removebg-preview.png"
+            
             alt=""
             className="mr-4"
           />
@@ -23,7 +25,8 @@ function ImagePrestataire() {
 
         <div className="w-40 ">
           <img
-            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
+            src="/public/Image/IMG-20230820-WA0035-1-removebg-preview.png"
+            
             alt=""
             className="mr-4"
           />
@@ -32,7 +35,8 @@ function ImagePrestataire() {
 
         <div className="w-40">
           <img
-            src="public\Image\IMG-20230820-WA0035-1-removebg-preview.png"
+            src="/public/Image/IMG-20230820-WA0035-1-removebg-preview.png"
+            
             alt=""
             className="mr-4"
           />
