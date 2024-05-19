@@ -17,18 +17,18 @@ function Footer() {
       </div>
       <div className="flex mb-5 gap-10 justify-botton">
           <img
-            src="public\Image\logo correction.png "
+            src="/Image/logo correction.png "
             width="30"
             height="20"
             />
           <img
-            src="public\Image\logo correction.png"
+            src="/Image/logo correction.png"
             alt=""
             width="30"
             height="20"
             />
           <img
-            src="public\Image\logo correction.png"
+            src="/Image/logo correction.png"
             alt=""
             width="30"
             height="20"

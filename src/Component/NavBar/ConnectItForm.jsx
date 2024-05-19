@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 function ConnectItForm() {
+  const navigate = useNavigate();
   const {
     register,
     formState: { errors },
@@ -32,21 +34,31 @@ function ConnectItForm() {
       email: "",
       username: "",
       motDePasse: "",
-      agree: false ,
+      agree: false,
     });
 
     // Cacher le formulaire après la soumission
-       setShowForm(false);
-    location.reload()
-
+    setShowForm(false);
+    // location.reload()
+    navigate("/");
   };
+  // const handleCancel = () => {
+  //   navigate(0); // Recharger page
+  // };
 
   return (
-    <div className=" bg-white {showForm ?  w-[100%] p-10 m-12 flex justify-between">
+    <div className=" bg-white {showForm ?  w-[100%] p-10 m-12 flex ">
       <div className=" bg-blue-500 w-80 m-10 h-100 rounded-lg mb-0 mt-0 p-2">
-        <p className="text-left text-xl font-medium  text-white mb-20">Connect'IT</p>
-        <p className="text-white text-3xl font-medium mb-4">Lorem ipsum dolor sit amet consectetur elit.</p>
-        <p className="text-white font-light">Lorem ipsum dolor sit, amet consectetur isicing elit. Rem dolor et sit quaerat debi consectetur sed sunt cupiditate </p>
+        <p className="text-left text-xl font-medium  text-white mb-20">
+          Connect'IT
+        </p>
+        <p className="text-white text-3xl font-medium mb-4">
+          Lorem ipsum dolor sit amet consectetur elit.
+        </p>
+        <p className="text-white font-light">
+          Lorem ipsum dolor sit, amet consectetur isicing elit. Rem dolor et sit
+          quaerat debi consectetur sed sunt cupiditate{" "}
+        </p>
       </div>
 
       {showForm ? (
@@ -55,9 +67,9 @@ function ConnectItForm() {
           className="mx-auto max-w-lg"
         >
           <div className="flex flex-col ">
-           <div className=" text-left text-xl text-black  font-medium mb-3">
-            <p text-red>Créer votre compte</p>
-            </div> 
+            <div className=" text-left text-xl text-black  font-medium mb-3">
+              <p text-red>Créer votre compte</p>
+            </div>
             <div className="flex flex-col text-black  mb-2 rounded-lg">
               <label htmlFor="firstName" className="text-left">
                 Pre-nom
@@ -211,14 +223,14 @@ function ConnectItForm() {
           <div className="">
             <button
               className="cursor-pointer rounded-lg bg-blue-500 text-white p-2  hover: opacity-75 w-[225px]  animate "
-              type="submit"
+              type="submit" 
             >
-              Créer un compte 
+              Créer un compte
             </button>
           </div>
         </form>
       ) : (
-        <button onClick={() => setShowForm(true)}>Créer un compte</button>
+        <button onClick={() => setShowForm(true)} >Créer un compte</button>
       )}
     </div>
   );
