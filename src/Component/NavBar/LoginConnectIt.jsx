@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 
 function LoginConnectIt() {
@@ -10,11 +11,12 @@ function LoginConnectIt() {
       } = useForm();
     
       const [formData, setFormData] = useState({
-        username: "",
+        email: "",
         motDePasse: "",
       });
     
-    //   const [showLoginForm, setShowLoginForm] = useState(true);
+      const navigate = useNavigate();
+     const [showLoginForm, setShowLoginForm] = useState(true);
     
       const onSubmitForm = (data) => {
         console.log(data);
@@ -22,13 +24,13 @@ function LoginConnectIt() {
     
         // Réinitialisation des champs après la soumission du formulaire
         setFormData({
-          username: "",
+          email: "",
           motDePasse: "",
         });
     
         // Cacher le formulaire après la soumission
            setShowLoginForm(false);
-        location.reload()
+           navigate("/PageUtilisateur");
     
       };
     return ( 
@@ -39,7 +41,7 @@ function LoginConnectIt() {
         <p className="text-white font-light">Lorem ipsum dolor sit, amet consectetur isicing elit. Rem dolor et sit quaerat debi consectetur sed sunt cupiditate </p>
       </div>
 
-      {setShowLoginForm ? (
+      {showLoginForm ? (
         <form
           onSubmit={handleSubmit(onSubmitForm)}
           className="mx-auto max-w-lg"
@@ -52,28 +54,23 @@ function LoginConnectIt() {
           
           <div className="flex flex-col">
             <div className="flex flex-col text-black rounded-lg mb-2">
-              <label htmlFor="username" className="text-left">
-                Nom d'utilisateur
+              <label htmlFor="email" className="text-left">
+                Email
               </label>
               <input
-                name="username"
-                type="text"
-                {...register("username", {
+                name="email"
+                type="email"
+                {...register("email", {
                   required: true,
-                  minLength: 6,
+                  pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}$/i,
                 })}
-                className="p-2 border border-blue-500 rounded-lg text-black"
-                value={formData.username}
-                onChange={(e) =>
-                  setFormData({ ...formData, username: e.target.value })
-                }
-              />
-            </div>
-            {errors.username && (
-              <span style={{ color: "red" }}>
-                Le nom d'utilisateur doit avoir au moins 6 caractères
-              </span>
-            )}
+                
+                className="p-2 border border-blue-500 rounded-lg"
+                />
+              </div>
+              {errors.email && (
+                <span style={{ color: "blue" }}>invalid email</span>
+              )}
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col text-black rounded-lg  mb-2">

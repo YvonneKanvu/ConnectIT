@@ -8,7 +8,7 @@ function ImagePrestataire() {
           <img
             src="/Image/IMG-20230820-WA0035-1-removebg-preview.png"
             
-            alt=""
+            alt="imagePrestataire"
             className="mr-4"
           />
           <p>Téchnicien Materiel Informatique</p>
@@ -17,7 +17,7 @@ function ImagePrestataire() {
           <img
             src="/Image/IMG-20230820-WA0035-1-removebg-preview.png"
             
-            alt=""
+            alt="imagePrestataire"
             className="mr-4"
           />
           <p>Créatrice UI et UX</p>
@@ -25,9 +25,9 @@ function ImagePrestataire() {
 
         <div className="w-40 ">
           <img
-            src="/public/Image/IMG-20230820-WA0035-1-removebg-preview.png"
+            src="/Image/IMG-20230820-WA0035-1-removebg-preview.png"
             
-            alt=""
+            alt="imagePrestataire"
             className="mr-4"
           />
           <p>Ingénieur Téchnicien Réseau</p>
@@ -35,9 +35,9 @@ function ImagePrestataire() {
 
         <div className="w-40">
           <img
-            src="/public/Image/IMG-20230820-WA0035-1-removebg-preview.png"
+            src="/Image/IMG-20230820-WA0035-1-removebg-preview.png"
             
-            alt=""
+            alt="imagePrestataire"
             className="mr-4"
           />
           <p>Developpeuse FullStack</p>

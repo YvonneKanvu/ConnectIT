@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function ConnectItForm() {
   const navigate = useNavigate();
+  const [showForm, setShowForm] = useState(true);
   const {
     register,
     formState: { errors },
@@ -20,7 +21,6 @@ function ConnectItForm() {
     agree: false,
   });
 
-  const [showForm, setShowForm] = useState(true);
 
   const onSubmitForm = (data) => {
     console.log(data);
@@ -47,7 +47,7 @@ function ConnectItForm() {
   // };
 
   return (
-    <div className=" bg-white {showForm ?  w-[100%] p-10 m-12 flex ">
+    <div className={` bg-white {showForm ?  "w-[100%] p-10 m-12 flex justify-between" : ""}`}>
       <div className=" bg-blue-500 w-80 m-10 h-100 rounded-lg mb-0 mt-0 p-2">
         <p className="text-left text-xl font-medium  text-white mb-20">
           Connect'IT
@@ -68,7 +68,7 @@ function ConnectItForm() {
         >
           <div className="flex flex-col ">
             <div className=" text-left text-xl text-black  font-medium mb-3">
-              <p text-red>Créer votre compte</p>
+              <p className="text-red">Créer votre compte</p>
             </div>
             <div className="flex flex-col text-black  mb-2 rounded-lg">
               <label htmlFor="firstName" className="text-left">
@@ -215,7 +215,7 @@ function ConnectItForm() {
               </label>
             </div>
             {errors.agree && (
-              <span style={{ color: "red" }}>
+            <span style={{ color: "red" }}>
                 Vous devez accepter les conditions d'utilisation
               </span>
             )}
