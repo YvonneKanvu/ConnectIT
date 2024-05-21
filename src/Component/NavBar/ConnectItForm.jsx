@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function ConnectItForm() {
   const navigate = useNavigate();
@@ -16,14 +17,15 @@ function ConnectItForm() {
     name: "",
     phone: "",
     email: "",
-    username: "",
     motDePasse: "",
-    agree: false,
+    
   });
 
 
-  const onSubmitForm = (data) => {
-    console.log(data);
+  const onSubmitForm = async (data) => {
+    try {
+    const response = await axios.post('https://localhost:3003.com/api/register', data);
+      console.log(response.data);
     alert(`${data.name} tu viens de créer ton compte avec succès `);
 
     // Réinitialisation des champs après la soumission du formulaire
@@ -32,20 +34,20 @@ function ConnectItForm() {
       name: "",
       phone: "",
       email: "",
-      username: "",
+      // username: "",
       motDePasse: "",
-      agree: false,
+      // agree: false,
     });
 
     // Cacher le formulaire après la soumission
     setShowForm(false);
     // location.reload()
     navigate("/");
+} catch (error) {
+  console.error('Erreur lors de la création du compte:', error);
+  alert('Une erreur est survenue lors de la création de votre compte. Veuillez réessayer.');
+}
   };
-  // const handleCancel = () => {
-  //   navigate(0); // Recharger page
-  // };
-
   return (
     <div className={` bg-white {showForm ?  "w-[100%] p-10 m-12 flex justify-between" : ""}`}>
       <div className=" bg-blue-500 w-80 m-10 h-100 rounded-lg mb-0 mt-0 p-2">
@@ -151,7 +153,7 @@ function ConnectItForm() {
               <span style={{ color: "blue" }}>invalid email</span>
             )}
           </div>
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             <div className="flex flex-col text-black rounded-lg mb-2">
               <label htmlFor="username" className="text-left">
                 Nom d'utilisateur
@@ -175,7 +177,7 @@ function ConnectItForm() {
                 Le nom d'utilisateur doit avoir au moins 6 caractères
               </span>
             )}
-          </div>
+          </div> */}
           <div className="flex flex-col">
             <div className="flex flex-col text-black rounded-lg  mb-2">
               <label htmlFor="password" className="text-left">
@@ -202,7 +204,7 @@ function ConnectItForm() {
             )}
           </div>
 
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             <div className="flex items-center text-black rounded-lg mb-2">
               <input
                 type="checkbox"
@@ -219,7 +221,7 @@ function ConnectItForm() {
                 Vous devez accepter les conditions d'utilisation
               </span>
             )}
-          </div>
+          </div> */}
           <div className="">
             <button
               className="cursor-pointer rounded-lg bg-blue-500 text-white p-2  hover: opacity-75 w-[225px]  animate "
