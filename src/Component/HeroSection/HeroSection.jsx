@@ -27,8 +27,8 @@ function HeroSection() {
   return (
     <div
       className="h-15 w-full left-0 p-10 flex flex-col justify-center items-center"
-      // style={backgroundStyle}
-      style={{ backgroundImage: "url('/images/connect-it-bg.jpg')" }}
+       style={backgroundStyle}
+      // style={{ backgroundImage: "url('/images/connect-it-bg.jpg')" "" : }}
     >
       <div className="text-3xl mb-12 text-white  ">
         <p>
@@ -55,7 +55,7 @@ function HeroSection() {
           <button
             type="submit"
             onClick={handleLoginAccountClick}
-            className="text-xl  h-10 w-40  bg-white rounded-md"
+            className="text-xl  h-10 w-40 bg-white  rounded-md"
           >
             Se connecter
           </button>
