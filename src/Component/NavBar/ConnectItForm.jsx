@@ -35,9 +35,9 @@ function ConnectItForm() {
         data
       );
       console.log("vous avez votre compte avec succès", response.data);
-      alert("compte crée avec succes");
+      alert(`${data.prenom} tu viens de créer ton compte avec succès`);
       setShowForm(false);
-      navigate("/");
+      navigate("/PageUtilisateur");
     } catch (error) {
       console.error(error.response?.data || error.message);
       alert(

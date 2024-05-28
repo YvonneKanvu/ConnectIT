@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -12,25 +13,35 @@ function LoginConnectIt() {
     
       const [formData, setFormData] = useState({
         email: "",
-        motDePasse: "",
+        password: "",
       });
     
       const navigate = useNavigate();
      const [showLoginForm, setShowLoginForm] = useState(true);
     
-      const onSubmitForm = (data) => {
+      const onSubmitForm = async (data) => {
         console.log(data);
-        alert(`${data.username} tu viens de te connecter avec succès `);
+        try {
+          const response = await axios.post("http://localhost:3003/protected/login"
+          ,data);
+          console.log("Vous êtes connecté avec succès", response.data);
+          alert(` connexion avec succès`);
     
         // Réinitialisation des champs après la soumission du formulaire
         setFormData({
           email: "",
-          motDePasse: "",
+          password: "",
         });
     
         // Cacher le formulaire après la soumission
            setShowLoginForm(false);
            navigate("/PageUtilisateur");
+          } catch (error) {
+            console.error(error.response?.data || error.message);
+            alert(
+              "Une erreur est survenue lors de la connexion. Veuillez réessayer."
+            );
+          }
     
       };
     return ( 
