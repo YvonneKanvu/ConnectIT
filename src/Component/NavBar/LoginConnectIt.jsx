@@ -20,13 +20,20 @@ function LoginConnectIt() {
      const [showLoginForm, setShowLoginForm] = useState(true);
     
       const onSubmitForm = async (data) => {
-        console.log(data);
+        console.log( "Form:", data);
         try {
-          const response = await axios.post("http://localhost:3003/protected/login"
-          ,data);
+          const response = await axios.post("http://localhost:3003/auth/login" ,data);
+           const { token } = response.data;
+          localStorage.setItem("jwt", token);  // Stocker le jeton JWT
+          console.log("Token stocké:", localStorage.getItem("jwt"));
+
+          // headers: {
+          //   "Authorization": `Bearer ${token}`
+          //   }
+          
           console.log("Vous êtes connecté avec succès", response.data);
           alert(` connexion avec succès`);
-    
+          
         // Réinitialisation des champs après la soumission du formulaire
         setFormData({
           email: "",
