@@ -30,14 +30,22 @@ function ConnectItForm() {
   const onSubmitForm = async (data) => {
     console.log(data);
     try {
+      // const token = localStorage.getItem('jwt'); // Récupérer le token du localStorage
       const response = await axios.post(
-        "http://localhost:3003/routeAuthentification/user/create",
+        "http://localhost:3003/auth/user/create",
         data
+        // ,
+        // {
+        //   headers: {
+        //     Authorization: `Bearer ${token}` // Inclure le token dans les en-têtes
+        //   }
+        // }
       );
       console.log("vous avez votre compte avec succès", response.data);
+      localStorage.setItem('jwt', response.data.token);
       alert(`${data.prenom} tu viens de créer ton compte avec succès`);
       setShowForm(false);
-      navigate("/PageUtilisateur");
+      navigate("/Login");
     } catch (error) {
       console.error(error.response?.data || error.message);
       alert(
