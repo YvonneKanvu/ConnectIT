@@ -32,7 +32,8 @@ function ConnectItForm() {
     try {
       // const token = localStorage.getItem('jwt'); // Récupérer le token du localStorage
       const response = await axios.post(
-        "http://localhost:3003/auth/user/create",
+        // "http://localhost:3003/auth/user/create",
+        "https://myconnectitb-yu68.onrender.com/auth/user/create",
         data
         // ,
         // {

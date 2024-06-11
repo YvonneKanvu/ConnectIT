@@ -22,7 +22,8 @@ function LoginConnectIt() {
       const onSubmitForm = async (data) => {
         console.log( "Form:", data);
         try {
-          const response = await axios.post("http://localhost:3003/auth/login" ,data);
+          // const response = await axios.post("http://localhost:3003/auth/login" ,data);
+          const response = await axios.post("https://myconnectitb-yu68.onrender.com/auth/login" ,data);
            const { token } = response.data;
           localStorage.setItem("jwt", token);  // Stocker le jeton JWT
           console.log("Token stocké:", localStorage.getItem("jwt"));

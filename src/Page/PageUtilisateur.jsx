@@ -18,7 +18,8 @@ function PageUtilisateur() {
             console.log('Token JWT:', token);
 
             try {
-                const response = await axios.get("http://localhost:3003/user/userPage", {
+                // const response = await axios.get("http://localhost:3003/user/userPage", {
+                const response = await axios.get("https://myconnectitb-yu68.onrender.com/auth/user/userPge", {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
